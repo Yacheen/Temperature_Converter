@@ -1,6 +1,6 @@
 use std::io;
-
 fn main() {
+    
     // get converter choice
     let mut choice = String::new();
     println!("What converter would you like to use?");
@@ -21,7 +21,7 @@ fn main() {
         .read_line(&mut number_choice)
         .expect("Failed to read line");
 
-    let number_choice:String = match(number_choice).trim().parse() {
+    let number_choice:String = match number_choice.trim().parse() {
         Ok(doesntmatterwhaticallthis) => doesntmatterwhaticallthis,
         Err(_) => "ERROR".to_string(),
     };
@@ -36,11 +36,11 @@ fn main() {
     else {
         println!("That was either not a correct choice or number. please try again. closing program...");
     }
+
 }
 
 fn convert_to_fahrenheit(temperature:f64) -> f64 {
     return temperature * 9.0/5.0 + 32.0
-
 }
 
 fn convert_to_celcius(temperature:f64) -> f64 {
