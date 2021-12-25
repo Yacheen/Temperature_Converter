@@ -3,7 +3,7 @@ fn main() {
     
     // get converter choice
     let mut choice = String::new();
-    println!("What converter would you like to use?");
+    println!("Would you like to convert to fahrenheit or celcius?");
     io::stdin()
         .read_line(&mut choice)
         .expect("Failed to read line");
